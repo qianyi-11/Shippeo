@@ -1,0 +1,6 @@
+# Local development only — running the API locally and the test suite.
+# Vercel does not install these (it reads requirements.txt).
+-r requirements.txt
+uvicorn>=0.30
+pytest>=8.0
+httpx>=0.27

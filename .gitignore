@@ -1,0 +1,22 @@
+.env
+.env.example
+.env.*
+!.env.example
+.cache/
+out/
+data/
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+node_modules/
+.vercel/
+*serviceAccount*.json
+*-firebase-adminsdk-*.json
+*.log
+Claude outputs/
+.localdb/
+web/node_modules/
+web/dist/
+*.tsbuildinfo

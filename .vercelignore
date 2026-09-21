@@ -1,0 +1,9 @@
+.venv
+.cache
+.localdb
+out
+data
+tests
+web/node_modules
+web/dist
+**/__pycache__

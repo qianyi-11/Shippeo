@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --color-canvas: #f5f6f8;     /* app background */
+  --color-ink: #101826;        /* guaranteed-dark text/icons on bright accent fills */
+  --color-deck: #eef0f4;       /* raised / secondary surface */
+  --color-panel: #ffffff;      /* cards */
+  --color-line: #e2e5eb;       /* borders */
+  --color-mute: #6b7280;       /* secondary text */
+  --color-fog: #1f2430;        /* primary text */
+  --color-paper: #f5f2eb;      /* document reading surface */
+  --color-paperline: #e2dccf;
+  --color-graphite: #1d2635;   /* text on paper */
+
+  --color-match: #1f9d6b;      /* converged */
+  --color-norm: #3672c2;       /* normalized */
+  --color-review: #c1811a;     /* unresolved */
+  --color-miss: #d9503a;       /* diverging */
+  --color-void: #78808f;       /* missing / incomplete */
+}
+
+html, body, #root { min-height: 100%; }
+body {
+  background: var(--color-canvas);
+  color: var(--color-fog);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+:focus-visible { outline: 2px solid var(--color-norm); outline-offset: 2px; border-radius: 6px; }
+::selection { background: #1f9d6b3d; }
+
+.mark-evidence { background: #f7d98a; color: #1d2635; border-radius: 3px; box-shadow: 0 0 0 2px #f7d98a; }
+.mark-evidence.active { background: #ffcf5c; box-shadow: 0 0 0 3px #e0a43a; }
+
+.route-label { background: #ffffffee; border: none; box-shadow: 0 1px 4px rgba(16, 24, 38, 0.25); border-radius: 6px;
+  padding: 2px 7px; font-size: 12px; font-weight: 600; color: var(--color-fog); }
+.route-label::before { display: none; }
+
+@keyframes flow { to { stroke-dashoffset: -24; } }
+.flow { animation: flow 1.6s linear infinite; }
+@keyframes pulse-soft { 50% { opacity: .55; } }
+.pulse-soft { animation: pulse-soft 1.4s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
+
+@media print {
+  body { background: white !important; color: #111 !important; }
+  .no-print { display: none !important; }
+  .print-sheet { box-shadow: none !important; border: none !important; }
+}
