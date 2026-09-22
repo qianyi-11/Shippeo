@@ -13,9 +13,9 @@ Built for the **Averis x Monash Hackathon 2026**, *Shipping Document Verificatio
 | | |
 |---|---|
 | **GitHub Repository** | <https://github.com/qianyi-11/Shippeo> |
-| **Live Prototype / Demo** | _TODO: add Vercel URL_ |
+| **Live Prototype / Demo** | https://shippeo-rimjh641g-lee-qian-yis-projects.vercel.app/ |
 | **Slide Deck / Document** | https://docs.google.com/presentation/d/1cgonC20kPoxycUXJrXzgByqlkUMt1x-B/edit?usp=sharing&ouid=103634393442051942797&rtpof=true&sd=true |
-| **Video Demo** | _TODO: add link_ |
+| **Video Demo** | https://youtu.be/F1XoH4Gjfng |
 
 > **AI reads. Code decides.**
 > Gemini extracts and classifies. Deterministic code normalises and compares. A low-confidence
